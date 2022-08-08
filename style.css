@@ -1,0 +1,235 @@
+body {
+  background-color: #F7F5F0;
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+  color: #171A18;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.hr1 {
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  background-color: #171A18;
+  border: 0 none;
+  height: 1px;
+}
+
+.Big {
+  display: flex;
+}
+
+.header1 {
+  font-size: 20px;
+  padding-top: 1.5em;
+  padding-left: 0.8em;
+  flex: auto;
+}
+
+.title {
+  font-size: 20px;
+  padding-top: 1.5em;
+  padding-right: 2em;
+  flex: auto;
+}
+
+.contact {
+  color: #171A18;
+  text-decoration: none;
+}
+
+.contact:hover {
+  color: #ABA595;
+}
+
+.nav {
+  position: absolute;
+  right: 0;
+  box-shadow: 0 0 3em rgba(0,0,0,0.15);
+  background-color: #F7F5F0;
+  transform: translateX(100%);
+  transition: all 0.4s ease-out;
+  z-index: 9999;
+}
+
+.nav_list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 3em 6em;
+}
+
+.nav_item {
+  color: #171A18;
+  font-size: 1.5em;
+  padding: 20px;
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: all 0.4s ease-out;
+}
+
+.nav_link {
+  text-decoration: none;
+  color: var(--clr-dark);
+}
+
+.nav_link:hover {
+  color: #ABA595;
+}
+
+.nav_toggle {
+  position: absolute;
+  top: 2em;
+  left: 0;
+  transform: translateX(-100%);
+  background: var(--clr-light);
+  padding: 1em 1.2em;
+  border: 0;
+  border-radius: 0.25em 0 0 0.25em;
+  transition: all 0.4s ease-out;
+}
+
+.hamburger {
+  display: block;
+  position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  width: 2.5em;
+  height: 2px;
+  background-color: #171A18;
+  transition: all 0.4s ease-out;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  position: absolute;
+  left: 0;
+}
+
+.hamburger::before { bottom: 8px; }
+.hamburger::after { top: 8px;}
+
+.nav-open .nav {
+  transform: translateX(0);
+}
+
+.nav_toggle {
+  cursor: pointer;
+}
+
+.nav-open .nav .nav_list li {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.nav-open .hamburger {
+  transform: rotate(135deg);
+}
+
+.nav-open .hamburger::before {
+  opacity: 0;
+}
+
+.nav-open .hamburger::after {
+  transform: rotate(90deg) translate(-8px);
+}
+
+.nav-open .nav_toggle {
+  transform: rotate(360deg);
+}
+
+.mainpage {
+  margin-left: 1em;
+  margin-right: 1em;
+  position: absolute;
+}
+
+.header .first {
+  font-size: 5em;
+  text-align: center;
+  font-weight: bold;
+  color: #B36C2E ;
+  background-image: url("https://en.canson.com/sites/default/files/styles/slider/public/medias-images/Canson-Fine-Art---Sketching.jpg?itok=yJUz3rQu");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 100%;
+  padding-top: 250px;
+  padding-bottom: auto;
+}
+
+.header .second {
+  font-size: 4.5em;
+  color: #334D3C;
+  font-weight: bold;
+  text-align: center;
+}
+
+.third {
+  padding-top: 1em;
+  font-size: 1.2em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.third div {
+  width: 100%;
+  padding: 10px;
+}
+
+.intro3 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.button-27 {
+  appearance: none;
+  background-color: #f7f4ef;
+  color: #334D3C;
+  border: 0.5px solid #334D3C;
+  border-radius: 15px;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: normal;
+  margin: 0;
+  min-height: 40px;
+  min-width: 0;
+  outline: none;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+  will-change: transform;
+}
+
+.button-27:disabled {
+  pointer-events: none;
+}
+
+.button-27:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.button-27:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+
+
