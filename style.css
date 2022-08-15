@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   background-color: #F7F5F0;
   margin: 0px;
@@ -10,8 +16,8 @@ body {
 .hr1 {
   margin-left: 1em;
   margin-right: 1em;
-  margin-top: 3%;
-  margin-bottom: 3%;
+  margin-top: 30px;
+  margin-bottom: 30px;
   background-color: #171A18;
   border: 0 none;
   height: 1px;
@@ -19,29 +25,27 @@ body {
 
 .Big {
   display: flex;
+  font-size: 20px;
+  justify-content: space-between;
 }
 
 .header1 {
-  font-size: 20px;
   padding-top: 1.5em;
   padding-left: 0.8em;
-  flex: auto;
 }
 
-.title {
-  font-size: 20px;
+.nav_list1 {
   padding-top: 1.5em;
-  padding-right: 2em;
-  flex: auto;
+  padding-right: 0.8em;
+  display: flex;
+  gap: 10px;
+  transition: all 0.4s ease-out;
 }
 
-.contact {
-  color: #171A18;
-  text-decoration: none;
-}
-
-.contact:hover {
-  color: #ABA595;
+@media (min-width: 60em) {
+  .nav_list1 {
+    opacity: 0;
+  }
 }
 
 .nav {
@@ -62,10 +66,16 @@ body {
   padding: 3em 6em;
 }
 
+@media (max-width: 60em) {
+  .nav {
+    opacity: 0;
+  }
+}
+
 .nav_item {
   color: #171A18;
-  font-size: 1.5em;
-  padding-top: 75px;
+  font-size: 1em;
+  padding: 20px;
   transform: translateX(-100%);
   opacity: 0;
   transition: all 0.4s ease-out;
@@ -101,7 +111,7 @@ body {
 .hamburger::before,
 .hamburger::after {
   width: 2.5em;
-  height: 2px;
+  height: 1.5px;
   background-color: #171A18;
   transition: all 0.4s ease-out;
 }
@@ -171,21 +181,20 @@ body {
 }
 
 .third {
-  padding-top: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 1.5em;
   font-size: 1.2em;
   display: flex;
   justify-content: space-between;
-}
-
-.third div {
   width: 100%;
-  padding: 10px;
+  gap: 30px;
 }
 
 .intro3 {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
+  gap: 20px;
 }
 
 .button-27 {
@@ -193,7 +202,7 @@ body {
   background-color: #f7f4ef;
   color: #334D3C;
   border: 0.5px solid #334D3C;
-  border-radius: 15px;
+  border-radius: 10px;
   box-sizing: border-box;
   cursor: pointer;
   display: inline-block;
@@ -230,11 +239,13 @@ body {
 }
 
 .hr2 {
-  margin-top: 3%;
-  margin-bottom: 3%;
+  margin-top: 30px;
+  margin-bottom: 30px;
   background-color: #171A18;
   border: 0 none;
   height: 1px;
 }
 
-
+.footnote {
+  margin-bottom: 30px;
+}
