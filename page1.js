@@ -14,6 +14,7 @@ let questions = [
     "b. Hard pencil",
     "c. Soft lead"
     ],
+    correctoutput: "Correct! Good job!",
     wrongoutput: "Incorrect. \"B\" stands for \"lack\", indicating a softer lead, and is darker."
   },
   {
@@ -25,6 +26,7 @@ let questions = [
     "b. 9H",
     "c. 4B"
     ],
+    correctoutput: "Correct! Good job!",
     wrongoutput: "Incorrect. \"H\" indicates the hard pencils which can draw lighter, and larger number means higher degree of the pencil intensity. Therefore, the correct answer is 9H."
   }
 ]
@@ -56,10 +58,9 @@ function optionSelected(answer) {
   let userAns = answer.textContent;
   let correctAns = questions[que_count].answer;
   let alloptions = option_list.children.length;
-  let output_text = '<div class="output">' + 'Correct! Good job!' + '</div>';
+  let output_text = '<div class="output">' + questions[que_count].correctoutput + '</div>';
   let wrongoutput_text = '<div class="output">' + questions[que_count].wrongoutput + '</div>';
  
-  
   if (userAns == correctAns) {
     answer.classList.add("correct");
     console.log("Correct Answer");
@@ -91,6 +92,7 @@ next_btn.onclick = () => {
   if(que_count < questions.length - 1) {
     que_count++;
     showQuestions(que_count);
+    next_btn.style.display = 'none';
   }
 }
 
@@ -100,11 +102,21 @@ next_btn.addEventListener('click', showBtn);
 function showBtn(e) { 
  previous_btn.style.display = 'inline'; 
  e.preventDefault(); 
-} 
+ output.style.display = 'none';
+}
 
 previous_btn.onclick = () => {
   if (que_count > 0) {
     que_count = que_count - 1;
     showQuestions(que_count);
+    previous_btn.style.display = 'none';
+    next_btn.style.display = 'inline'; 
+    output.style.display = 'none';
   }
+}
+
+option_list.addEventListener('click', show); 
+
+function show() {
+  output.style.display = 'inline';
 }
