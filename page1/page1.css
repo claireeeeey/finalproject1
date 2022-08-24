@@ -70,7 +70,7 @@ body {
   list-style: none;
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 115vh;
   padding: 3em 6em;
 }
 
@@ -204,14 +204,21 @@ body {
   line-height: 20pt;
 }
 
-.quiz {
+.secondpart {
+  display: flex;
+  justify-content: center;
   margin-top: 30px;
+}
+
+.quiz {
   margin-left: 1em;
   margin-right: 1em;
   padding: 1em;
   font-size: 1.2em;
   background-color: #EDE4D5;
   border-radius: 15px;
+  display: flex;
+  flex-direction: column;
 }
 
 .quiztitle {
@@ -220,12 +227,13 @@ body {
   display: flex;
 }
 
-img {
+.quizimg {
   width: 35px;
 }
 
 .que_text {
   color: #171A18;
+  width: 22rem;
   padding-top: 1rem;
 }
 
@@ -265,6 +273,7 @@ img {
 }
 
 .output {
+  width: 22rem;
   padding-top: 5px;
   padding-bottom: 5px;
   color: #B37563;
@@ -293,6 +302,37 @@ img {
 .btn button:active {
   box-shadow: none;
   transform: translateY(0);
+}
+
+.hint {
+  margin-left: 1em;
+  margin-right: 1em;
+  padding: 1em;
+  font-size: 1.2em;
+  background-color: #EDE4D5;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.hinttitle {
+  font-size: 1.5em;
+  color: #065566;
+  display: flex;
+}
+
+.hintbulb {
+  width: 35px;
+}
+
+.hinttext {
+  color: #171A18;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.hintimg {
+  width: 100%;
 }
 
 .footer {
