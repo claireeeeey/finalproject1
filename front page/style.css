@@ -200,7 +200,6 @@ body {
 .button-27 {
   appearance: none;
   background-color: #f7f4ef;
-  color: #334D3C;
   border: 0.5px solid #334D3C;
   border-radius: 10px;
   box-sizing: border-box;
@@ -236,6 +235,11 @@ body {
 .button-27:active {
   box-shadow: none;
   transform: translateY(0);
+}
+
+.nextpage {
+  text-decoration: none;
+  color: #334D3C;
 }
 
 .hr2 {
