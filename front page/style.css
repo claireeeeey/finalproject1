@@ -181,8 +181,8 @@ body {
 }
 
 .third {
-  padding-left: 1em;
-  padding-right: 1em;
+  padding-left: 4em;
+  padding-right: 4em;
   padding-top: 1.5em;
   font-size: 1.2em;
   display: flex;
@@ -243,7 +243,7 @@ body {
 }
 
 .hr2 {
-  margin-top: 30px;
+  margin-top: 50px;
   margin-bottom: 30px;
   background-color: #171A18;
   border: 0 none;
@@ -251,5 +251,5 @@ body {
 }
 
 .footnote {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
