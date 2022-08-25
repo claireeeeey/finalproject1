@@ -375,3 +375,8 @@ body {
   box-shadow: none;
   transform: translateY(0);
 }
+
+.nextpage {
+  text-decoration: none;
+  color: #334D3C;
+}
